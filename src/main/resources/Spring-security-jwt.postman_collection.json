@@ -1,0 +1,58 @@
+{
+	"info": {
+		"_postman_id": "b80de222-05ca-4a21-91c7-8589669a0cbd",
+		"name": "Spring-security-jwt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "28535146"
+	},
+	"item": [
+		{
+			"name": "GetAllUsers",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrYW5pc2hrYSIsImlhdCI6MTcwNzkxNjM5OSwiZXhwIjoxNzA3OTM0Mzk5fQ.i6unjqDi0Il1Dr0itvkH7A7xCTXfMcGkgE-rQKxtGwVuaTIz5mCKLOVhDkXDIchgTccnjk7xI6E3I9iSGfL8TA"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8081/home/user"
+			},
+			"response": []
+		},
+		{
+			"name": "GetCurrentUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrYW5pc2hrYSIsImlhdCI6MTcwNzkxNjM5OSwiZXhwIjoxNzA3OTM0Mzk5fQ.i6unjqDi0Il1Dr0itvkH7A7xCTXfMcGkgE-rQKxtGwVuaTIz5mCKLOVhDkXDIchgTccnjk7xI6E3I9iSGfL8TA"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8081/home/currentUser"
+			},
+			"response": []
+		},
+		{
+			"name": "GenerateJWTToken",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"kanishka\",\r\n    \"password\":\"kanishka\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8081/auth/login"
+			},
+			"response": []
+		}
+	]
+}
