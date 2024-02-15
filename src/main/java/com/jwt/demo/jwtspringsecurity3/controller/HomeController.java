@@ -1,12 +1,10 @@
 package com.jwt.demo.jwtspringsecurity3.controller;
 
 
-import com.jwt.demo.jwtspringsecurity3.models.User;
+import com.jwt.demo.jwtspringsecurity3.entities.User;
 import com.jwt.demo.jwtspringsecurity3.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
 import java.util.List;
@@ -24,6 +22,8 @@ public class HomeController {
         System.out.println("Getting Users");
         return userService.getUsers();
     }
+
+
 
     @GetMapping("/currentUser")
     public String getLoggedInUsers(Principal principal)
